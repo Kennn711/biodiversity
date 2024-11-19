@@ -1,10 +1,13 @@
-.container-hero {
+.about-section {
+  background-color: rgb(210, 255, 213);
+}
+
+.container-about {
   max-width: 1200px;
   height: 500px;
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
-  padding-bottom: 50rem;
 }
 
 .row {
@@ -28,11 +31,6 @@
   margin-bottom: 15px;
 }
 
-.col-left p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
 /* right */
 .col-right {
   flex: 1;
@@ -40,29 +38,6 @@
   justify-content: center;
   align-items: center;
   order: 4;
-}
-
-.col-right img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* image animation */
-.hero-img {
-  animation: floating 3s ease-in-out infinite;
-  padding-top: 15%;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 /* responsive */

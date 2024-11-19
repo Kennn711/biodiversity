@@ -1,11 +1,58 @@
 Landing Page:
-Navbar: Home, About, Blog, FAQs, Contact
-Jumbotron : gambar teks
+Navbar: Home, About, Exploration, FAQs, Contact
+Jumbotron : teks gambar
 Section1: About -> readme
-Section2: Blog = Biodiversity (img+link) 
+Section2: Exploration = Biodiversity (img+link) 
 Section3: Contact
 Footer: mencakup data diri/website
 
 MultiPage:
-Blog = Biodiversity
+Exploration = Biodiversity
 FAQs
+
+
+Biodiversity:
+
+/ Landing Page /
+Biodiversity, or biological diversity, is a term used to describe the variety of life on Earth. It encompasses different types of living
+organisms, their habitats, and the ecosystems they inhabit. Biodiversity can be categorized into three main levels:
+
+  - Genetic Diversity: Refers to the genetic variation within a single species, such as differences among individuals in a population. For
+    example, variations in color, shape, or traits within dog breeds or rice plants illustrate genetic diversity.
+
+  - Species Diversity: Describes the variety of species and their abundance in a specific ecosystem or region. For instance, tropical
+    rainforests are home to a vast number of plant, animal, and microorganism species.
+
+  - Ecosystem Diversity: Highlights the variety of ecosystems in a particular area, such as forests, grasslands, coral reefs, and deserts. Each
+    ecosystem has its unique characteristics and supports distinct communities of living organisms.
+
+/ MultiPage /
+Biodiversity adalah ...
+
+Genetic Diversity =
+
+Species Diversity =
+
+Ecosystem Diversity =
+
+The Importance of Biodiversity
+- Maintaining Ecosystem Balance: All living organisms are interconnected, relying on one another through food chains and ecosystem cycles.
+- Natural Resources: Biodiversity provides essential resources for humans, including food, medicine, raw materials, and other necessities.
+- Climate Stability: Diverse ecosystems play a vital role in regulating the global climate by storing carbon and maintaining the water cycle.
+- Aesthetic and Cultural Value: Many human cultures depend on specific living organisms for traditions, spirituality, and tourism, highlighting
+  the intrinsic and cultural worth of biodiversity.
+
+Font bagus yang kemungkinan bisa digunakan :
+(Judul Hero)
+1. darumadrop one
+2. aloja
+3. bryndan white
+4.
+
+(Deskripsi Hero)
+1. 
+
+Jenis - jenis serangga : 
+1. Pollinator
+2. Predator
+3. Decomposer
