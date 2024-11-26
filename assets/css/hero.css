@@ -49,6 +49,7 @@
 /* image animation */
 .hero-img {
   animation: floating 3s ease-in-out infinite;
+  padding-top: 15%;
 }
 
 @keyframes floating {

@@ -1,0 +1,7 @@
+.container-exploration {
+  max-width: 1200px;
+  height: 500px;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+}
