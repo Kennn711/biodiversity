@@ -1,0 +1,9 @@
+@font-face {
+  font-family: HeroFont;
+  src: url(../font/agrandir-heavy.ttf);
+}
+
+@font-face {
+  font-family: NavbarA;
+  src: url(../font/poppins-regular.ttf);
+}
