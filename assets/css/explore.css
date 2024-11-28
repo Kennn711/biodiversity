@@ -1,0 +1,236 @@
+@import url('./font.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Section */
+.hero {
+  background: url('../uploads/bg-explore.png') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Menjaga elemen terurut dari atas ke bawah */
+  min-height: 100vh; /* Pastikan hero tetap setinggi layar tanpa tambahan ruang */
+  padding-top: 60px; /* Space untuk navbar */
+}
+
+/* Hero Content */
+.hero-content {
+  padding: 20px;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Flexbox untuk susunan vertikal */
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 45px;
+  margin-bottom: 0px;
+  letter-spacing: 3px;
+  font-family: HeroFont;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Description */
+.hero-description {
+  font-size: 18px;
+  font-family: OpenSans;
+}
+
+/* Button Category */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 0px; /* Jarak antara filter buttons dan konten di atasnya */
+}
+
+/* Styling untuk tombol */
+.filter-btn {
+  padding: 10px 20px;
+  background-color: rgba(221, 124, 55, 0.8);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: rgba(221, 124, 55, 1);
+}
+
+.filter-btn.active {
+  background-color: rgba(34, 193, 195, 1);
+  font-weight: bold;
+}
+
+/* Box Container */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+  margin-top: 0px; /* Ruang antar elemen, bukan ruang ekstra setelah hero */
+  justify-items: center;
+  width: 100%;
+  grid-row-gap: 25px;
+}
+
+/* Box Styling */
+.box {
+  position: relative;
+  width: 300px;
+  height: 170px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  background-color: white;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  /* Efek zoom saat hover */
+}
+
+/* Image inside box */
+.box-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Box Content Styling (hidden by default) */
+.box-content {
+  position: absolute;
+  bottom: 0px;
+  /* Perubahan jarak untuk memberi ruang */
+  left: 0;
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  background: linear-gradient(to bottom, transparent, black);
+  opacity: 0;
+  /* Konten tersembunyi secara default */
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Menyusun konten ke atas */
+  text-align: left;
+  /* Rata kiri untuk konten */
+  z-index: 2;
+  /* Agar konten tetap di atas */
+}
+
+/* Konten muncul saat box dihover */
+.box:hover .box-content {
+  opacity: 1;
+}
+
+/* Subjudul */
+.box .subjudul {
+  position: absolute;
+  bottom: 10px;
+  /* Mengubah posisi subjudul */
+  left: 10px;
+  font-size: 17px;
+  color: white;
+  font-family: HeroFont;
+  margin: 0;
+  z-index: 3;
+  /* Agar subjudul selalu terlihat */
+  opacity: 1;
+  /* Subjudul tampil saat tidak dihover */
+  transition: 0.2s ease;
+}
+
+/* On hover, subjudul disappears and is replaced by the hover subjudul */
+.box:hover .subjudul {
+  opacity: 0;
+  /* Subjudul hilang saat hover */
+}
+
+/* Deskripsi dan Tombol */
+.box .description {
+  font-size: 10px;
+  color: white;
+  font-family: OpenSans;
+  margin: 0;
+  z-index: 2;
+  white-space: normal; /* Mengizinkan teks membungkus ke baris baru */
+  overflow: hidden; /* Sembunyikan bagian yang meluap */
+  text-overflow: ellipsis; /* Tambahkan "..." jika terlalu panjang */
+  display: -webkit-box; /* Gunakan box fleksibel untuk membatasi baris */
+  -webkit-line-clamp: 2; /* Batasi hanya 2 baris */
+  -webkit-box-orient: vertical; /* Orientasi vertikal untuk clamp */
+  line-height: 1.4; /* Tingkatkan keterbacaan */
+}
+
+.box:hover .description {
+  bottom: 0px;
+  /* Move description up on hover */
+}
+
+/* Button Styling */
+.box button {
+  padding: 8px 20px;
+  background-color: rgba(221, 124, 55, 0.767);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: auto;
+  /* Rata kanan tombol */
+}
+
+.box button:hover {
+  background-color: rgba(221, 124, 55, 1);
+}
+
+.pembatas {
+  white-space: nowrap;
+  /* Mencegah teks menjadi wrap/berpindah baris */
+  overflow: hidden;
+  /* Sembunyikan teks yang melampaui batas */
+  text-overflow: ellipsis;
+  /* Menambahkan '...' di akhir teks yang terpotong */
+  width: 200px;
+  /* Tentukan lebar elemen, bisa disesuaikan */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coloumn {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}

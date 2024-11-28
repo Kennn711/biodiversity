@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/explore.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+
+<body class="body">
+    <header class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <h1 class="logo">Sino</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explore</h1>
+            <p class="hero-description">Insect biodiversity is the variety of insect species.</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="predator">Predator</button>
+                <button class="filter-btn" data-filter="decomposer">Decomposer</button>
+                <button class="filter-btn" data-filter="pollinator">Pollinator</button>
+            </div>
+        </div>
+
+
+        <!-- Boxes Section -->
+        <div class="box-container">
+            <div class="box">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-ladybug.png" alt="Image 1">
+                </div>
+                <div class="subjudul">Ladybug</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Ladybug</h2>
+                            <p class="description pembatas text-box">A small, bright red beetle with black spots,
+                                helpful in controlling pests.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-dragonfly.png" alt="Image 2">
+                </div>
+                <div class="subjudul">DragonFly</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>DragonFly</h2>
+                            <p class="description pembatas">A graceful insect with long wings, skilled at hunting
+                                mosquitoes mid-flight.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box predator">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-tarantula.png" alt="Image 3">
+                </div>
+                <div class="subjudul">Tarantula</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Tarantula</h2>
+                            <p class="description pembatas">A large, hairy spider found in warm climates, known for its
+                                gentle nature.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box predator">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-spider.png" alt="Image 4">
+                </div>
+                <div class="subjudul">Spider</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Spider</h2>
+                            <p class="description pembatas">An eight-legged arachnid that weaves intricate webs to catch
+                                prey.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-explore.png" alt="Image 5">
+                </div>
+                <div class="subjudul">SpiderMan</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>SpiderMan</h2>
+                            <p class="description pembatas">Deskripsi singkat tentang topik kelima.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-ladybug.png" alt="Image 6">
+                </div>
+                <div class="subjudul">LadyRose</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>LadyRose</h2>
+                            <p class="description pembatas">Deskripsi singkat tentang topik keenam.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Get filter value
+            const filter = button.getAttribute('data-filter');
+            // Show/Hide boxes based on filter
+            document.querySelectorAll('.box').forEach(box => {
+                if (filter === 'all' || box.classList.contains(filter)) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</html>
