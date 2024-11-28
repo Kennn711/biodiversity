@@ -86,10 +86,26 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 30px;
-  margin-top: 0px; /* Ruang antar elemen, bukan ruang ekstra setelah hero */
+  margin-top: 0px;
   justify-items: center;
   width: 100%;
   grid-row-gap: 25px;
+  transition: all 0.5s ease;
+}
+
+/* Box Container saat filter selain "All" dipilih */
+.box-container.filtered {
+  display: flex;
+  justify-content: flex-start; /* Semua box akan diratakan ke kiri */
+  flex-wrap: nowrap; /* Box tidak akan turun ke baris berikutnya */
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto; /* Scroll horizontal jika terlalu banyak box */
+}
+
+/* Menata box agar berada di sebelah kanan */
+.box-container.filtered .box {
+  flex-shrink: 0; /* Box tidak boleh mengecil saat dibungkus */
 }
 
 /* Box Styling */
@@ -100,8 +116,16 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
   background-color: white;
+  opacity: 0; /* Default is hidden */
+  visibility: hidden; /* Default is hidden */
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* Adding transition for opacity */
+}
+
+.box.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s linear 0s; /* Fade-in effect */
 }
 
 .box:hover {

@@ -44,7 +44,7 @@
 
         <!-- Boxes Section -->
         <div class="box-container">
-            <div class="box">
+            <div class="box decomposer">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-ladybug.png" alt="Image 1">
                 </div>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box decomposer">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-dragonfly.png" alt="Image 2">
                 </div>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box pollinator">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-explore.png" alt="Image 5">
                 </div>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box pollinator">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-ladybug.png" alt="Image 6">
                 </div>
@@ -155,25 +155,85 @@
 </body>
 
 <script>
-    document.querySelectorAll('.filter-btn').forEach(button => {
+    document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const boxContainer = document.querySelector('.box-container');
+
+    // Cek apakah ada filter yang dipilih sebelumnya di localStorage
+    const lastFilter = localStorage.getItem('selectedFilter');
+    if (!lastFilter) {
+        localStorage.setItem('selectedFilter', 'all'); // Set 'all' as default filter
+    }
+
+    // Apply active class to the correct button based on the saved filter
+    filterButtons.forEach(button => {
+        if (button.getAttribute('data-filter') === localStorage.getItem('selectedFilter')) {
+            button.classList.add('active');
+        }
+    });
+
+    // Apply the correct filter to the boxes and layout change
+    const filter = localStorage.getItem('selectedFilter');
+    if (filter !== 'all') {
+        boxContainer.classList.add('filtered');
+    } else {
+        boxContainer.classList.remove('filtered');
+    }
+
+    document.querySelectorAll('.box').forEach(box => {
+        if (filter === 'all') {
+            // Show all boxes when 'All' is selected
+            box.classList.add('show'); // Make them visible with smooth transition
+            box.style.display = 'block'; // Ensure they are displayed
+        } else if (box.classList.contains(filter)) {
+            // Only show boxes that match the selected filter
+            box.classList.add('show'); // Make them visible with smooth transition
+            box.style.display = 'block'; // Ensure they are displayed
+        } else {
+            // Hide boxes that do not match the selected filter
+            box.classList.remove('show'); // Ensure the class is removed for smooth hiding
+            box.style.display = 'none'; // Hide the box
+        }
+    });
+
+    // Add event listeners for button clicks
+    filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            filterButtons.forEach(btn => btn.classList.remove('active'));
             // Add active class to clicked button
             button.classList.add('active');
-
+            
             // Get filter value
             const filter = button.getAttribute('data-filter');
+            localStorage.setItem('selectedFilter', filter); // Store the selected filter
+
             // Show/Hide boxes based on filter
             document.querySelectorAll('.box').forEach(box => {
-                if (filter === 'all' || box.classList.contains(filter)) {
-                    box.style.display = 'block';
+                if (filter === 'all') {
+                    // Show all boxes when 'All' is selected
+                    box.classList.add('show'); // Make them visible with smooth transition
+                    box.style.display = 'block'; // Ensure they are displayed
+                } else if (box.classList.contains(filter)) {
+                    // Only show boxes that match the selected filter
+                    box.classList.add('show'); // Make them visible with smooth transition
+                    box.style.display = 'block'; // Ensure they are displayed
                 } else {
-                    box.style.display = 'none';
+                    // Hide boxes that do not match the selected filter
+                    box.classList.remove('show'); // Ensure the class is removed for smooth hiding
+                    box.style.display = 'none'; // Hide the box
                 }
             });
+
+            // If filter is not 'all', apply flex layout to box container
+            if (filter !== 'all') {
+                boxContainer.classList.add('filtered');
+            } else {
+                boxContainer.classList.remove('filtered');
+            }
         });
     });
-</script>
+});
 
+</script>
 </html>
