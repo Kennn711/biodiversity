@@ -97,7 +97,7 @@
 .box-container.filtered {
   display: flex;
   justify-content: flex-start; /* Semua box akan diratakan ke kiri */
-  flex-wrap: nowrap; /* Box tidak akan turun ke baris berikutnya */
+  flex-wrap: wrap; /* Box tidak akan turun ke baris berikutnya */
   gap: 20px;
   width: 100%;
   overflow-x: auto; /* Scroll horizontal jika terlalu banyak box */
@@ -112,6 +112,8 @@
 .box {
   position: relative;
   width: 300px;
+  display: block;
+  opacity: 1;
   height: 170px;
   border-radius: 15px;
   overflow: hidden;
@@ -162,6 +164,7 @@
   transition: 0.2s ease;
   display: flex;
   flex-direction: column;
+  font-family: OpenSans;
   justify-content: flex-start;
   /* Menyusun konten ke atas */
   text-align: left;
