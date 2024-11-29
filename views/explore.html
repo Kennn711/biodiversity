@@ -44,7 +44,7 @@
 
         <!-- Boxes Section -->
         <div class="box-container">
-            <div class="box decomposer">
+            <div class="box predator">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-ladybug.png" alt="Image 1">
                 </div>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box decomposer">
+            <div class="box predator">
                 <div class="box-image">
                     <img src="../assets/uploads/bg-dragonfly.png" alt="Image 2">
                 </div>
@@ -82,13 +82,31 @@
             </div>
             <div class="box predator">
                 <div class="box-image">
-                    <img src="../assets/uploads/bg-tarantula.png" alt="Image 3">
+                    <img src="../assets/uploads/bg-spider.png" alt="Image 2">
                 </div>
-                <div class="subjudul">Tarantula</div>
+                <div class="subjudul">Spider</div>
                 <div class="box-content">
                     <div class="row">
                         <div class="coloumn">
-                            <h2>Tarantula</h2>
+                            <h2>Spider</h2>
+                            <p class="description pembatas">A graceful insect with long wings, skilled at hunting
+                                mosquitoes mid-flight.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box decomposer">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-springtail.png" alt="Image 3">
+                </div>
+                <div class="subjudul">Springtail</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Springtail</h2>
                             <p class="description pembatas">A large, hairy spider found in warm climates, known for its
                                 gentle nature.</p>
                         </div>
@@ -98,15 +116,33 @@
                     </div>
                 </div>
             </div>
-            <div class="box predator">
+            <div class="box decomposer">
                 <div class="box-image">
-                    <img src="../assets/uploads/bg-spider.png" alt="Image 4">
+                    <img src="../assets/uploads/bg-housefly.png" alt="Image 4">
                 </div>
-                <div class="subjudul">Spider</div>
+                <div class="subjudul">Housefly</div>
                 <div class="box-content">
                     <div class="row">
                         <div class="coloumn">
-                            <h2>Spider</h2>
+                            <h2>Housefly</h2>
+                            <p class="description pembatas">An eight-legged arachnid that weaves intricate webs to catch
+                                prey.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box decomposer">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-termite.png" alt="Image 4">
+                </div>
+                <div class="subjudul">Termite</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Termite</h2>
                             <p class="description pembatas">An eight-legged arachnid that weaves intricate webs to catch
                                 prey.</p>
                         </div>
@@ -118,13 +154,13 @@
             </div>
             <div class="box pollinator">
                 <div class="box-image">
-                    <img src="../assets/uploads/bg-explore.png" alt="Image 5">
+                    <img src="../assets/uploads/bg-honeybee.png" alt="Image 5">
                 </div>
-                <div class="subjudul">SpiderMan</div>
+                <div class="subjudul">Honeybee</div>
                 <div class="box-content">
                     <div class="row">
                         <div class="coloumn">
-                            <h2>SpiderMan</h2>
+                            <h2>Honeybee</h2>
                             <p class="description pembatas">Deskripsi singkat tentang topik kelima.</p>
                         </div>
                         <div class="coloumn">
@@ -135,13 +171,30 @@
             </div>
             <div class="box pollinator">
                 <div class="box-image">
-                    <img src="../assets/uploads/bg-ladybug.png" alt="Image 6">
+                    <img src="../assets/uploads/bg-monarch-butterfly.png" alt="Image 6">
                 </div>
-                <div class="subjudul">LadyRose</div>
+                <div class="subjudul">Monarch Butterfly</div>
                 <div class="box-content">
                     <div class="row">
                         <div class="coloumn">
-                            <h2>LadyRose</h2>
+                            <h2>Monarch</h2>
+                            <p class="description pembatas">Deskripsi singkat tentang topik keenam.</p>
+                        </div>
+                        <div class="coloumn">
+                            <button style="margin-left: 40px;">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box pollinator">
+                <div class="box-image">
+                    <img src="../assets/uploads/bg-hoverfly.png" alt="Image 6">
+                </div>
+                <div class="subjudul">Hoverfly</div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="coloumn">
+                            <h2>Hoverfly</h2>
                             <p class="description pembatas">Deskripsi singkat tentang topik keenam.</p>
                         </div>
                         <div class="coloumn">
@@ -152,10 +205,11 @@
             </div>
         </div>
 
+        <!-- Chatbot -->
         <div class="chatbot-card">
             <div class="chatbot-header">
                 Chatbot
-                <button class="close-btn" onclick="toggleChatbot()">X</button>
+                <button class="close-btn" onclick="toggleChatbot()">&times;</button>
             </div>
             <div class="chatbot-body" id="chatbotBody">
                 what you want to ask?
@@ -170,6 +224,8 @@
 </body>
 
 <script>
+
+    //Filter Category
     document.addEventListener('DOMContentLoaded', () => {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const boxContainer = document.querySelector('.box-container');
@@ -271,64 +327,64 @@
         const inputField = document.getElementById("chatbotInput");
         const chatbotBody = document.getElementById("chatbotBody");
         const userMessage = inputField.value.trim();
-      
+
         if (userMessage !== "") {
-          // Create a chat bubble for user message
-          const userBubble = document.createElement("div");
-          userBubble.className = "chat-bubble user";
-          userBubble.innerText = userMessage;
-          chatbotBody.appendChild(userBubble);
-      
-          // Clear the input field
-          inputField.value = "";
-      
-          // Simulate chatbot response after a short delay
-          setTimeout(() => {
-            const botBubble = document.createElement("div");
-            botBubble.className = "chat-bubble bot";
-            chatbotBody.appendChild(botBubble);
-      
-            // Generate bot response and animate it
-            typeWriterEffect(botBubble, generateBotResponse(userMessage));
-          }, 500);
-      
-          // Scroll to the latest message
-          chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            // Create a chat bubble for user message
+            const userBubble = document.createElement("div");
+            userBubble.className = "chat-bubble user";
+            userBubble.innerText = userMessage;
+            chatbotBody.appendChild(userBubble);
+
+            // Clear the input field
+            inputField.value = "";
+
+            // Simulate chatbot response after a short delay
+            setTimeout(() => {
+                const botBubble = document.createElement("div");
+                botBubble.className = "chat-bubble bot";
+                chatbotBody.appendChild(botBubble);
+
+                // Generate bot response and animate it
+                typeWriterEffect(botBubble, generateBotResponse(userMessage));
+            }, 500);
+
+            // Scroll to the latest message
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
         }
-      }
-      
-      // Function to generate chatbot response
-      function generateBotResponse(userMessage) {
+    }
+
+    // Function to generate chatbot response
+    function generateBotResponse(userMessage) {
         if (userMessage.toLowerCase().includes("hello")) {
-          return "Hi there! How can I assist you today?";
+            return "Hi there! How can I assist you today?";
         } else if (userMessage.toLowerCase().includes("bye")) {
-          return "Goodbye! Have a great day!";
+            return "Goodbye! Have a great day!";
         } else if (userMessage.toLowerCase().includes("what is sino?")) {
-          return "inspired by the Japanese movie Naruto, which has a character named Sino, he has the power to control insects.";
+            return "inspired by the Japanese movie Naruto, which has a character named Sino, he has the power to control insects.";
         } else {
-          return "I'm here to help with any questions you have!";
+            return "I'm here to help with any questions you have!";
         }
-      }
-      
-      // Typing effect function
-      function typeWriterEffect(element, text, speed = 50) {
+    }
+
+    // Typing effect function
+    function typeWriterEffect(element, text, speed = 50) {
         let i = 0;
         const typingInterval = setInterval(() => {
-          if (i < text.length) {
-            element.innerHTML += `<span>${text[i]}</span>`;
-            i++;
-          } else {
-            clearInterval(typingInterval); // Stop typing effect
-          }
+            if (i < text.length) {
+                element.innerHTML += `<span>${text[i]}</span>`;
+                i++;
+            } else {
+                clearInterval(typingInterval); // Stop typing effect
+            }
         }, speed);
-      }
-      
-      // Function to toggle the chatbot visibility
-      function toggleChatbot() {
+    }
+
+    // Function to toggle the chatbot visibility
+    function toggleChatbot() {
         const chatbotCard = document.querySelector(".chatbot-card");
         chatbotCard.classList.toggle("show");
-      }
-      
+    }
+
 </script>
 
 </html>
