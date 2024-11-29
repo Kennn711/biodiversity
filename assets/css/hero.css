@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../uploads/bg-ladybug.webp),
+    url(../uploads/bg-spider.webp), url(../uploads/bg-dragonfly.webp),
+    url(../uploads/bg-tarantula.webp);
+  background-color: transparent;
+  animation: animate infinite 12s;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: HeroFont;
+  opacity: 0;
+}
+
+.hero-subtitle {
+  font-family: HeroSubTitle;
+  max-width: 40rem;
+  white-space: normal;
+  opacity: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: left;
+  color: white;
+  z-index: 1000;
+  transition-delay: 0.1s;
+}
+
+.slide.active {
+  opacity: 1; /* Show active slide */
+}
+
+.hero-title,
+.hero-subtitle {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.slide.active .hero-title,
+.slide.active .hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.slide p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.slide a {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #6f8473;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.slide a:hover {
+  background-color: #5e6d61;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(../uploads/bg-ladybug.webp);
+  }
+  25% {
+    background-image: url(../uploads/bg-spider.webp);
+  }
+  50% {
+    background-image: url(../uploads/bg-dragonfly.webp);
+  }
+  75% {
+    background-image: url(../uploads/bg-tarantula.webp);
+  }
+  100% {
+    background-image: url(../uploads/bg-ladybug.webp);
+  }
+}

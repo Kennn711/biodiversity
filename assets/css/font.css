@@ -7,3 +7,8 @@
   font-family: NavbarA;
   src: url(../font/poppins-regular.ttf);
 }
+
+@font-face {
+  font-family: HeroSubTitle;
+  src: url(../font/agrandir-narrow.otf);
+}
