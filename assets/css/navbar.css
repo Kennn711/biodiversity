@@ -65,7 +65,7 @@
   height: 2px;
   bottom: 0.1px; /* Sesuaikan jarak garis bawah dari teks */
   left: 0;
-  background-color: black; /* Warna underscore */
+  background-color: white; /* Warna underscore */
   transition: width 0.2s ease-in-out;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .navbar a:hover {
-  color: #000;
+  color: white;
 }
 
 @media (max-width: 768px) {

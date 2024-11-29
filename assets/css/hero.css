@@ -6,7 +6,7 @@
   background-position: center;
   background-image: url(../uploads/bg-ladybug.webp),
     url(../uploads/bg-spider.webp), url(../uploads/bg-dragonfly.webp),
-    url(../uploads/bg-tarantula.webp);
+    url(../uploads/bg-springtail.webp);
   background-color: transparent;
   animation: animate infinite 12s;
   z-index: 1;
@@ -90,7 +90,7 @@
     background-image: url(../uploads/bg-dragonfly.webp);
   }
   75% {
-    background-image: url(../uploads/bg-tarantula.webp);
+    background-image: url(../uploads/bg-springtail.webp);
   }
   100% {
     background-image: url(../uploads/bg-ladybug.webp);
