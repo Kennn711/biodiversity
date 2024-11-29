@@ -9,6 +9,11 @@
 }
 
 @font-face {
+<<<<<<< HEAD
   font-family: HeroSubTitle;
   src: url(../font/agrandir-narrow.otf);
+=======
+  font-family: OpenSans;
+  src: url(../font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+>>>>>>> 0aae29d86f6d2e34464264a85b4ac9b9570755e9
 }
