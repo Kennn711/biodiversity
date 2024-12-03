@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../assets/css/hero.css">
     <link rel="stylesheet" href="../assets/css/about.css">
     <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/explore.css">
 </head>
 
 <body class="body bg-hero">
@@ -34,7 +36,7 @@
 
     <main class="main-content">
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="slide">
                 <h1 class="hero-title">LADYBUG</h1>
                 <p class="hero-subtitle">
@@ -72,20 +74,257 @@
 
 
         <!-- About -->
-        <section>
+        <section class="about" id="about">
+            <div class="about-image"></div>
 
+            <div class="about-content">
+                <h2>About</h2>
+                <hr class="about-hr">
+                <p class="left-align">
+                    Although often considered a nuisance, insects have an important role in maintaining
+                    the balance of the ecosystem and supporting human life.
+                </p>
+                <p class="right-align">
+                    They keep the environment in balance by controlling pests, helping pollinate plants,
+                    recycling nutrients, providing food for many animals, and serving as indicators of
+                    environmental health.
+                </p>
+            </div>
         </section>
         <!-- About End -->
 
 
         <!-- Explore -->
-        <section>
+        <section class="explore" id="explore">
+            <div class="explore-content">
+                <h1 class="explore-title">Explore</h1>
+                <p class="explore-description">Insect biodiversity is the variety of insect species.</p>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="predator">Predator</button>
+                    <button class="filter-btn" data-filter="decomposer">Decomposer</button>
+                    <button class="filter-btn" data-filter="pollinator">Pollinator</button>
+                </div>
+            </div>
+
+
+            <!-- Boxes Section -->
+            <div class="box-container">
+                <div class="box predator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-ladybug.png" alt="Image 1">
+                    </div>
+                    <div class="subjudul">Ladybug</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Ladybug</h2>
+                                <p class="description pembatas text-box">A small, bright red beetle with black spots,
+                                    helpful in controlling pests.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box predator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-dragonfly.png" alt="Image 2">
+                    </div>
+                    <div class="subjudul">DragonFly</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>DragonFly</h2>
+                                <p class="description pembatas">A graceful insect with long wings, skilled at hunting
+                                    mosquitoes mid-flight.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box predator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-spider.png" alt="Image 2">
+                    </div>
+                    <div class="subjudul">Spider</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Spider</h2>
+                                <p class="description pembatas">A graceful insect with long wings, skilled at hunting
+                                    mosquitoes mid-flight.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box decomposer">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-springtail.png" alt="Image 3">
+                    </div>
+                    <div class="subjudul">Springtail</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Springtail</h2>
+                                <p class="description pembatas">A large, hairy spider found in warm climates, known for
+                                    its
+                                    gentle nature.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box decomposer">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-housefly.png" alt="Image 4">
+                    </div>
+                    <div class="subjudul">Housefly</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Housefly</h2>
+                                <p class="description pembatas">An eight-legged arachnid that weaves intricate webs to
+                                    catch
+                                    prey.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box decomposer">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-termite.png" alt="Image 4">
+                    </div>
+                    <div class="subjudul">Termite</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Termite</h2>
+                                <p class="description pembatas">An eight-legged arachnid that weaves intricate webs to
+                                    catch
+                                    prey.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box pollinator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-honeybee.png" alt="Image 5">
+                    </div>
+                    <div class="subjudul">Honeybee</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Honeybee</h2>
+                                <p class="description pembatas">Deskripsi singkat tentang topik kelima.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box pollinator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-monarch-butterfly.png" alt="Image 6">
+                    </div>
+                    <div class="subjudul">Monarch Butterfly</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Monarch</h2>
+                                <p class="description pembatas">Deskripsi singkat tentang topik keenam.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box pollinator">
+                    <div class="box-image">
+                        <img src="../assets/uploads/bg-hoverfly.png" alt="Image 6">
+                    </div>
+                    <div class="subjudul">Hoverfly</div>
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="coloumn">
+                                <h2>Hoverfly</h2>
+                                <p class="description pembatas">Deskripsi singkat tentang topik keenam.</p>
+                            </div>
+                            <div class="coloumn">
+                                <button style="margin-left: 40px;">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chatbot -->
+            <div class="chatbot-card">
+                <div class="chatbot-header">
+                    Chatbot
+                    <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+                </div>
+                <div class="chatbot-body" id="chatbotBody">
+                    what you want to ask?
+                </div>
+                <div class="chatbot-footer">
+                    <input type="text" id="chatbotInput" placeholder="Type your message..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
 
         </section>
         <!-- Explore End -->
+
+        <!-- Contact -->
+        <footer class="footer" id="contact">
+            <div class="footer-container container">
+                <div class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/the_beasteri"
+                            target="_blank">@Beasteri</a></p>
+                    <p><strong>Email:</strong> <a href="">beasteriofficial@gmail.com</a></p>
+                    <p><strong>Address:</strong> Kaligoro Village, Kutorejo, Mojokerto, East Java</p>
+                </div>
+                <div class="footer-map">
+                    <h2>Our Location</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253133.97611539767!2d112.32561451234618!3d-7.551150352928959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d7880709dfd%3A0xe62e404b1da30f2a!2sPANDORADEV!5e0!3m2!1sen!2sid!4v1733210678866!5m2!1sen!2sid"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sino. Created by
+                    <a href="https://github.com/Kennn711" target="_blank">Marcell</a>
+                    &
+                    <a href="https://github.com/SOGOL999" target="_blank">Gilang</a>
+                    From
+                    <a href="https://www.instagram.com/the_beasteri" target="_blank">Beasteri</a>
+                </p>
+            </div>
+        </footer>
+        <!-- Contact End -->
     </main>
 
     <script src="../assets/js/text-hero.js"></script>
+    <script src="../assets/js/explore-chatbot.js"></script>
 </body>
 
 </html>

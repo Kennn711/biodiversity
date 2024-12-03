@@ -1,4 +1,4 @@
-@import url('./font.css');
+@import url("./font.css");
 
 *,
 *::after,
@@ -14,8 +14,8 @@
 }
 
 /* Hero Section */
-.hero {
-  background: url('../uploads/bg-explore.png') no-repeat center center/cover;
+.explore {
+  background: url("../uploads/bg-explore.png") no-repeat center center/cover;
   position: relative;
   color: white;
   display: flex;
@@ -29,7 +29,7 @@
 }
 
 /* Hero Content */
-.hero-content {
+.explore-content {
   padding: 20px;
   text-align: left;
   color: white;
@@ -39,7 +39,7 @@
 }
 
 /* Hero Title */
-.hero-title {
+.explore-title {
   font-size: 45px;
   margin-bottom: 0px;
   letter-spacing: 3px;
@@ -48,7 +48,7 @@
 }
 
 /* Hero Description */
-.hero-description {
+.explore-description {
   font-size: 18px;
   font-family: OpenSans;
 }
@@ -184,7 +184,7 @@
   /* Agar konten tetap di atas */
 }
 
-.box h2{
+.box h2 {
   font-family: OpenSans;
 }
 
@@ -413,8 +413,6 @@
     border-color: transparent;
   }
 }
-
-
 
 /* RESPONSIF */
 /* Responsive for screens smaller than 768px (mobile devices) */
