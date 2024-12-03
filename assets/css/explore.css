@@ -95,7 +95,6 @@
   justify-items: center;
   width: 100%;
   grid-row-gap: 25px;
-  transition: all 0.5s ease;
 }
 
 /* Box Container saat filter selain "All" dipilih */

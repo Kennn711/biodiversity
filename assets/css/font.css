@@ -12,3 +12,8 @@
   font-family: HeroSubTitle;
   src: url(../font/agrandir-narrow.otf);
 }
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
