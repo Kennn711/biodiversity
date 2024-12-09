@@ -1,0 +1,120 @@
+.navbar {
+  background-color: black;
+}
+
+.about-hr {
+  height: 4px;
+  background-color: black;
+  border: none;
+  margin: 20px 0;
+}
+
+.about-image {
+  width: 60%;
+  height: 100%;
+  clip-path: circle(60% at 10% 50%);
+  background-image: url(../uploads/about-section.webp);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 2rem;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 4rem;
+  color: #333;
+  text-align: center;
+  margin-right: 10rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-content h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  font-family: HeroFont;
+}
+
+.about-content p {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.left-align {
+  font-family: HeroSubTitle;
+  text-align: left;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.right-align {
+  font-family: HeroSubTitle;
+  text-align: right;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .about-content h2 {
+    font-size: 4rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-image {
+    width: 100%;
+    clip-path: none;
+  }
+
+  .about-content {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 3rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
