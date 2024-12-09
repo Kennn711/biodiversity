@@ -88,7 +88,7 @@
 /* Box Container */
 .box-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 30px;
   margin-top: 0px;
@@ -100,11 +100,11 @@
 /* Box Container saat filter selain "All" dipilih */
 .box-container.filtered {
   display: flex;
-  justify-content: flex-start;
-  /* Semua box akan diratakan ke kiri */
+  justify-content: center;
+  /* Semua box akan diratakan ke tengah */
   flex-wrap: wrap;
   /* Box tidak akan turun ke baris berikutnya */
-  gap: 20px;
+  gap: 60px;
   width: 100%;
   overflow-x: auto;
   /* Scroll horizontal jika terlalu banyak box */
@@ -119,10 +119,10 @@
 /* Box Styling */
 .box {
   position: relative;
-  width: 300px;
+  width: 380px;
   display: block;
   opacity: 1;
-  height: 170px;
+  height: 220px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -168,8 +168,8 @@
   /* Perubahan jarak untuk memberi ruang */
   left: 0;
   width: 100%;
-  height: 50%;
-  padding: 10px;
+  height: 60%;
+  padding: 30px;
   background: linear-gradient(to bottom, transparent, black);
   opacity: 0;
   /* Konten tersembunyi secara default */
@@ -218,11 +218,12 @@
 
 /* Deskripsi dan Tombol */
 .box .description {
-  font-size: 10px;
+  font-size: 13.5px;
   color: white;
   font-family: OpenSans;
   margin: 0;
   z-index: 2;
+  bottom: 100px; /* Ubah jarak vertikal sesuai kebutuhan */
   white-space: normal;
   /* Mengizinkan teks membungkus ke baris baru */
   overflow: hidden;
@@ -237,11 +238,6 @@
   /* Orientasi vertikal untuk clamp */
   line-height: 1.4;
   /* Tingkatkan keterbacaan */
-}
-
-.box:hover .description {
-  bottom: 0px;
-  /* Move description up on hover */
 }
 
 /* Button Styling */
