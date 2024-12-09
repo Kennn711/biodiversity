@@ -19,6 +19,10 @@
   position: relative;
   color: white;
   display: flex;
+  background-attachment: fixed;
+  height: 100vh;
+  /* Tetap setinggi layar */
+  overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
   /* Menjaga elemen terurut dari atas ke bawah */
@@ -223,7 +227,8 @@
   font-family: OpenSans;
   margin: 0;
   z-index: 2;
-  bottom: 100px; /* Ubah jarak vertikal sesuai kebutuhan */
+  bottom: 100px;
+  /* Ubah jarak vertikal sesuai kebutuhan */
   white-space: normal;
   /* Mengizinkan teks membungkus ke baris baru */
   overflow: hidden;
@@ -291,7 +296,8 @@
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  display: none; /* Initially hidden */
+  display: none;
+  /* Initially hidden */
   flex-direction: column;
   z-index: 1000;
 }
@@ -368,6 +374,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -413,6 +420,7 @@
 /* RESPONSIF */
 /* Responsive for screens smaller than 768px (mobile devices) */
 @media (max-width: 768px) {
+
   /* Navbar */
   .navbar {
     padding: 10px;
@@ -421,69 +429,85 @@
   /* Hero Section */
   .hero {
     padding-top: 50px;
-    min-height: 80vh; /* Adjust height for smaller screens */
+    min-height: 80vh;
+    /* Adjust height for smaller screens */
   }
 
   .hero-title {
-    font-size: 30px; /* Smaller font size for hero title */
+    font-size: 30px;
+    /* Smaller font size for hero title */
   }
 
   .hero-description {
-    font-size: 14px; /* Adjust description font size */
+    font-size: 14px;
+    /* Adjust description font size */
   }
 
   /* Filter Buttons */
   .filter-buttons {
     flex-direction: column;
-    gap: 10px; /* Reduce gap between buttons */
+    gap: 10px;
+    /* Reduce gap between buttons */
     margin-top: 10px;
   }
 
   .filter-btn {
     font-size: 12px;
-    padding: 8px 15px; /* Smaller buttons */
+    padding: 8px 15px;
+    /* Smaller buttons */
   }
 
   /* Box Container */
   .box-container {
-    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-template-columns: 1fr;
+    /* Single column for mobile */
     gap: 15px;
-    padding: 15px; /* Reduce padding */
+    padding: 15px;
+    /* Reduce padding */
   }
 
   .box {
-    width: 100%; /* Boxes span the full width */
-    height: 200px; /* Adjust height for better display */
+    width: 100%;
+    /* Boxes span the full width */
+    height: 200px;
+    /* Adjust height for better display */
   }
 
   /* Box Content */
   .box .description {
-    font-size: 12px; /* Smaller font size for description */
+    font-size: 12px;
+    /* Smaller font size for description */
   }
 
   /* Chatbot Card */
   .chatbot-card {
-    width: 90%; /* Adjust width to fit within mobile screens */
-    height: 300px; /* Adjust height */
+    width: 90%;
+    /* Adjust width to fit within mobile screens */
+    height: 300px;
+    /* Adjust height */
     bottom: 20px;
     right: 5%;
   }
 
   .chatbot-card .chatbot-header {
-    font-size: 16px; /* Adjust font size in header */
+    font-size: 16px;
+    /* Adjust font size in header */
     padding: 10px;
   }
 
   .chatbot-card .chatbot-body {
-    font-size: 12px; /* Smaller text size in body */
+    font-size: 12px;
+    /* Smaller text size in body */
     padding: 10px;
   }
 
   .chatbot-card .chatbot-footer input {
-    padding: 8px; /* Adjust input padding */
+    padding: 8px;
+    /* Adjust input padding */
   }
 
   .chatbot-card .chatbot-footer button {
-    padding: 8px 15px; /* Smaller button */
+    padding: 8px 15px;
+    /* Smaller button */
   }
 }
