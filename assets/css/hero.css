@@ -4,12 +4,10 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url(../uploads/bg-ladybug.webp),
-    url(../uploads/bg-spider.webp), url(../uploads/bg-dragonfly.webp),
-    url(../uploads/bg-springtail.webp);
-  background-color: transparent;
-  animation: animate infinite 12s;
+  background-color: black;
+  transition: background-image 1s ease-in-out;
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero-title {
@@ -30,11 +28,10 @@
   left: 10%;
   transform: translateY(-50%);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
   text-align: left;
   color: white;
-  z-index: 1000;
-  transition-delay: 0.1s;
+  z-index: 2;
 }
 
 .slide.active {
@@ -45,7 +42,7 @@
 .hero-subtitle {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .slide.active .hero-title,
@@ -77,22 +74,4 @@
 
 .slide a:hover {
   background-color: #5e6d61;
-}
-
-@keyframes animate {
-  0% {
-    background-image: url(../uploads/bg-ladybug.webp);
-  }
-  25% {
-    background-image: url(../uploads/bg-spider.webp);
-  }
-  50% {
-    background-image: url(../uploads/bg-dragonfly.webp);
-  }
-  75% {
-    background-image: url(../uploads/bg-springtail.webp);
-  }
-  100% {
-    background-image: url(../uploads/bg-ladybug.webp);
-  }
 }
