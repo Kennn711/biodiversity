@@ -136,7 +136,7 @@ function generateBotResponse(userMessage) {
   } else if (userMessage.toLowerCase().includes("bye")) {
     return "Goodbye! Have a great day!";
   } else if (userMessage.toLowerCase().includes("what is sino?")) {
-    return "inspired by the Japanese movie Naruto, which has a character named Sino, he has the power to control insects.";
+    return "inspired by the Japanese movie Naruto, which has a character named Shino, he has the power to control insects.";
   } else if (userMessage.toLowerCase().includes("what is biodiversity?")) {
     return "Biodiversity is vital for ecosystem stability and provides services like air purification, water filtration, and soil fertility. It includes all living organisms, from the smallest microbes to large animals and plants.";
   } else if (userMessage.toLowerCase().includes("what are the main types of biodiversity?")) {
@@ -183,6 +183,14 @@ function generateBotResponse(userMessage) {
     return "Monarch butterflies are iconic migratory insects known for their vibrant orange wings. They are unique for their long journeys across North America, migrating thousands of miles to find suitable breeding grounds.";
   } else if (userMessage.toLowerCase().includes("what are honeybees, and why are they important?")) {
     return "Honeybees are social insects known for producing honey and pollinating plants. They are vital for ecosystems and agriculture because they help pollinate many crops, supporting food production and biodiversity.";
+  } else if (userMessage.toLowerCase().includes("what is the mantis known for?")) {
+    return "The mantis is known for its distinctive prayer-like posture, skilled hunting abilities, and role in natural pest control by preying on various insects.";
+  } else if (userMessage.toLowerCase().includes("why is the mantis a predator?")) {
+    return "The mantis is a predator because it hunts insects using sharp reflexes, powerful forelegs to grasp prey, and excellent camouflage to ambush its targets effectively.";
+  } else if (userMessage.toLowerCase().includes("what are lacewings known for?")) {
+    return "Lacewings are known for their delicate, lace-like wings and their larvae, which are effective predators of pests like aphids.";
+  } else if (userMessage.toLowerCase().includes("why are lacewings beneficial to gardens?")) {
+    return "Lacewings are beneficial to gardens because their larvae feed on harmful pests, such as aphids and mites, helping to control infestations naturally.";
   } else {
     return "I'm here to help with any questions you have!";
   }
