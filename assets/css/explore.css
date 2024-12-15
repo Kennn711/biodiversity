@@ -8,13 +8,13 @@
   margin: 0;
 }
 
-/* Scrollbar untuk browser berbasis WebKit */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5); /* Transparan */
+  background-color: rgba(0, 0, 0, 0.7);
+  /*   border: 1px solid rgba(236, 240, 241, 0.5); */
   border-radius: 10px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -24,16 +24,9 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Hapus background track */
+  background: transparent;
 }
 
-
-/* Navbar */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Hero Section */
 .explore {
   background: url("../uploads/bg-explore.png") no-repeat center center/cover;
   position: relative;
@@ -42,52 +35,43 @@
   padding-bottom: 20px;
   background-attachment: fixed;
   height: 100vh;
-  /* Tetap setinggi layar */
   flex-direction: column;
   justify-content: flex-start;
-  /* Menjaga elemen terurut dari atas ke bawah */
   min-height: 100vh;
-  /* Pastikan hero tetap setinggi layar tanpa tambahan ruang */
   padding-top: 60px;
-  /* Space untuk navbar */
 }
 
-/* Hero Content */
 .explore-content {
   padding: 20px;
   text-align: left;
   color: white;
   display: flex;
   flex-direction: column;
-  /* Flexbox untuk susunan vertikal */
 }
 
-/* Hero Title */
 .explore-title {
   font-size: 45px;
   margin-bottom: 0px;
   letter-spacing: 3px;
-  font-family: HeroFont;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Hero Description */
 .explore-description {
   font-size: 18px;
-  font-family: OpenSans;
+  font-family: "Open Sans";
 }
 
-/* Button Category */
 .filter-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
   width: 100%;
   margin-top: 0px;
-  /* Jarak antara filter buttons dan konten di atasnya */
 }
 
-/* Styling untuk tombol */
 .filter-btn {
   padding: 10px 20px;
   background-color: rgba(221, 124, 55, 0.8);
@@ -105,11 +89,10 @@
 }
 
 .filter-btn.active {
-  background-color: rgba(34, 193, 195, 1);
+  background-color: #535c68;
   font-weight: bold;
 }
 
-/* Box Container */
 .box-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -122,26 +105,19 @@
   grid-row-gap: 25px;
 }
 
-/* Box Container saat filter selain "All" dipilih */
 .box-container.filtered {
   display: flex;
   justify-content: center;
-  /* Semua box akan diratakan ke tengah */
   flex-wrap: wrap;
-  /* Box tidak akan turun ke baris berikutnya */
   gap: 60px;
   width: 100%;
   overflow-x: auto;
-  /* Scroll horizontal jika terlalu banyak box */
 }
 
-/* Menata box agar berada di sebelah kanan */
 .box-container.filtered .box {
   flex-shrink: 0;
-  /* Box tidak boleh mengecil saat dibungkus */
 }
 
-/* Box Styling */
 .box {
   position: relative;
   width: 380px;
@@ -153,26 +129,20 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   opacity: 0;
-  /* Default is hidden */
   visibility: hidden;
-  /* Default is hidden */
   transition: opacity 0.5s ease, visibility 0s linear 0.5s;
-  /* Adding transition for opacity */
 }
 
 .box.show {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease, visibility 0s linear 0s;
-  /* Fade-in effect */
 }
 
 .box:hover {
   transform: scale(1.05);
-  /* Efek zoom saat hover */
 }
 
-/* Image inside box */
 .box-image {
   width: 100%;
   height: 100%;
@@ -186,87 +156,66 @@
   object-fit: cover;
 }
 
-/* Box Content Styling (hidden by default) */
 .box-content {
   position: absolute;
   bottom: 0px;
-  /* Perubahan jarak untuk memberi ruang */
   left: 0;
   width: 100%;
   height: 60%;
   padding: 30px;
   background: linear-gradient(to bottom, transparent, black);
   opacity: 0;
-  /* Konten tersembunyi secara default */
   transition: 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* Menyusun konten ke atas */
   text-align: left;
-  /* Rata kiri untuk konten */
   z-index: 2;
-  /* Agar konten tetap di atas */
 }
 
 .box h2 {
-  font-family: OpenSans;
+  font-family: "Open Sans";
 }
 
-/* Konten muncul saat box dihover */
 .box:hover .box-content {
   opacity: 1;
 }
 
-/* Subjudul */
 .box .subjudul {
   position: absolute;
   bottom: 10px;
-  /* Mengubah posisi subjudul */
   left: 10px;
   font-size: 17px;
   color: white;
-  font-family: HeroFont;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   z-index: 3;
-  /* Agar subjudul selalu terlihat */
   opacity: 1;
-  /* Subjudul tampil saat tidak dihover */
   transition: 0.2s ease;
 }
 
-/* On hover, subjudul disappears and is replaced by the hover subjudul */
 .box:hover .subjudul {
   opacity: 0;
-  /* Subjudul hilang saat hover */
 }
 
-/* Deskripsi dan Tombol */
 .box .description {
   font-size: 13.5px;
   color: white;
-  font-family: OpenSans;
+  font-family: "Open Sans";
   margin: 0;
   z-index: 2;
   bottom: 100px;
-  /* Ubah jarak vertikal sesuai kebutuhan */
   white-space: normal;
-  /* Mengizinkan teks membungkus ke baris baru */
   overflow: hidden;
-  /* Sembunyikan bagian yang meluap */
   text-overflow: ellipsis;
-  /* Tambahkan "..." jika terlalu panjang */
   display: -webkit-box;
-  /* Gunakan box fleksibel untuk membatasi baris */
   -webkit-line-clamp: 2;
-  /* Batasi hanya 2 baris */
   -webkit-box-orient: vertical;
-  /* Orientasi vertikal untuk clamp */
   line-height: 1.4;
-  /* Tingkatkan keterbacaan */
 }
 
-/* Button Styling */
 .box button {
   padding: 8px 20px;
   background-color: rgba(221, 124, 55, 0.767);
@@ -276,7 +225,6 @@
   cursor: pointer;
   transition: 0.3s ease;
   margin-left: auto;
-  /* Rata kanan tombol */
 }
 
 .box button:hover {
@@ -285,13 +233,9 @@
 
 .pembatas {
   white-space: nowrap;
-  /* Mencegah teks menjadi wrap/berpindah baris */
   overflow: hidden;
-  /* Sembunyikan teks yang melampaui batas */
   text-overflow: ellipsis;
-  /* Menambahkan '...' di akhir teks yang terpotong */
   width: 200px;
-  /* Tentukan lebar elemen, bisa disesuaikan */
 }
 
 .row {
@@ -306,7 +250,6 @@
   padding: 10px;
 }
 
-/* Chatbot Card Styling */
 .chatbot-card {
   position: fixed;
   bottom: 50px;
@@ -318,14 +261,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: none;
-  /* Initially hidden */
   flex-direction: column;
   z-index: 1000;
 }
 
-/* Chatbot Header */
 .chatbot-card .chatbot-header {
-  background-color: rgba(34, 193, 195, 1);
+  background-color: #535c68;
   color: white;
   padding: 15px;
   font-size: 18px;
@@ -344,7 +285,6 @@
   cursor: pointer;
 }
 
-/* Chatbot Body */
 .chatbot-card .chatbot-body {
   padding: 15px;
   font-family: Arial, sans-serif;
@@ -354,7 +294,6 @@
   overflow-y: auto;
 }
 
-/* Chatbot Footer */
 .chatbot-card .chatbot-footer {
   display: flex;
   padding: 10px;
@@ -384,7 +323,6 @@
   background-color: rgba(221, 124, 55, 1);
 }
 
-/* Transition for smooth appearance */
 .chatbot-card.show {
   display: flex;
   animation: fadeIn 0.3s ease-in-out;
@@ -402,7 +340,6 @@
   }
 }
 
-/* Chat bubble styling */
 .chat-bubble {
   padding: 10px 15px;
   border-radius: 15px;
@@ -425,7 +362,6 @@
   text-align: left;
 }
 
-/* Typing animation */
 .typing {
   border-right: 2px solid white;
   display: inline-block;
@@ -438,97 +374,72 @@
   }
 }
 
-/* RESPONSIF */
-/* Responsive for screens smaller than 768px (mobile devices) */
 @media (max-width: 768px) {
-
-  /* Navbar */
   .navbar {
     padding: 10px;
   }
 
-  /* Hero Section */
   .hero {
     padding-top: 50px;
     min-height: 80vh;
-    /* Adjust height for smaller screens */
   }
 
   .hero-title {
     font-size: 30px;
-    /* Smaller font size for hero title */
   }
 
   .hero-description {
     font-size: 14px;
-    /* Adjust description font size */
   }
 
-  /* Filter Buttons */
   .filter-buttons {
     flex-direction: column;
     gap: 10px;
-    /* Reduce gap between buttons */
     margin-top: 10px;
   }
 
   .filter-btn {
     font-size: 12px;
     padding: 8px 15px;
-    /* Smaller buttons */
   }
 
-  /* Box Container */
   .box-container {
     grid-template-columns: 1fr;
-    /* Single column for mobile */
     gap: 15px;
     padding: 15px;
-    /* Reduce padding */
   }
 
   .box {
     width: 100%;
-    /* Boxes span the full width */
     height: 200px;
-    /* Adjust height for better display */
   }
 
-  /* Box Content */
   .box .description {
     font-size: 12px;
-    /* Smaller font size for description */
   }
 
-  /* Chatbot Card */
   .chatbot-card {
     width: 90%;
-    /* Adjust width to fit within mobile screens */
     height: 300px;
-    /* Adjust height */
     bottom: 20px;
     right: 5%;
   }
 
   .chatbot-card .chatbot-header {
     font-size: 16px;
-    /* Adjust font size in header */
     padding: 10px;
   }
 
   .chatbot-card .chatbot-body {
     font-size: 12px;
-    /* Smaller text size in body */
     padding: 10px;
   }
 
   .chatbot-card .chatbot-footer input {
     padding: 8px;
-    /* Adjust input padding */
   }
 
   .chatbot-card .chatbot-footer button {
     padding: 8px 15px;
-    /* Smaller button */
   }
 }
